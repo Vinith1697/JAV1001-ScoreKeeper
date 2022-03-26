@@ -15,7 +15,7 @@ import android.view.View.OnClickListener;
 
 
 public class MainActivity extends AppCompatActivity {
-
+    //declaring variables
     TextView team1score;
     RadioGroup scoreGroup;
     RadioButton radioButton;
@@ -36,26 +36,33 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //storing the text view which will be updated in a variable
         team1score = findViewById(R.id.team1score);
         team1score.setText("0");
-
+        //storing radio group in a variable
         scoreGroup = findViewById(R.id.scoreGroup);
-
+        //storing button in a variable
         buttonTeamOneAdd = findViewById(R.id.teamOnePlus);
+
+        //implementing action listener for adding the score to Team 1
         buttonTeamOneAdd.setOnClickListener(new android.view.View.OnClickListener() {
             @Override
             public void onClick(android.view.View view) {
+                //finding which radio button was selected
                 int radioID = scoreGroup.getCheckedRadioButtonId();
                 radioButton = findViewById(radioID);
 
                 team1update = Integer.parseInt(radioButton.getText().toString());
+
+                //calculating the updated score
                 team1ScoreTotal = team1ScoreTotal + team1update;
                 team1score.setText(String.valueOf(team1ScoreTotal));
             }
         });
 
         buttonTeamOneSubtract = findViewById(R.id.teamOneMinus);
+
+        //implementing action listener for subtracting the score to Team 1
         buttonTeamOneSubtract.setOnClickListener(new android.view.View.OnClickListener() {
             @Override
             public void onClick(android.view.View view) {
@@ -79,6 +86,8 @@ public class MainActivity extends AppCompatActivity {
         team2score.setText("0");
 
         buttonTeamTwoAdd = findViewById(R.id.teamTwoPlus);
+
+        //implementing action listener for adding the score to Team 2
         buttonTeamTwoAdd.setOnClickListener(new android.view.View.OnClickListener() {
             @Override
             public void onClick(android.view.View view) {
@@ -92,6 +101,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         buttonTeamTwoSubtract = findViewById(R.id.teamTwoMinus);
+
+        //implementing action listener for subtracting the score to Team 2
         buttonTeamTwoSubtract.setOnClickListener(new android.view.View.OnClickListener() {
             @Override
             public void onClick(android.view.View view) {
