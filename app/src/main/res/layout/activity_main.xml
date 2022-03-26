@@ -1,3 +1,4 @@
+<!-- Student ID : A00241282 Vinith Nair -->
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,11 +9,11 @@
     tools:context=".MainActivity">
     <!--This is a comment -->
 
+    <!-- This is the text view which displays Team 2 score -->
     <TextView
         android:id="@+id/textViewTeam2"
         style="@style/GreenText"
         android:layout_width="wrap_content"
-
         android:layout_height="wrap_content"
         android:fontFamily="@font/audiowide"
         android:text="Team 2 Score"
@@ -78,7 +79,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.471" />
-
+    <!-- Radio button's group which displays scores-->
     <RadioGroup
         android:id="@+id/scoreGroup"
         android:layout_width="wrap_content"
@@ -112,6 +113,7 @@
             android:text="6" />
     </RadioGroup>
 
+    <!-- This is the text view which displays Team 1 score -->
     <TextView
         android:id="@+id/textView2"
         style="@style/GreenText"
@@ -128,7 +130,6 @@
         app:layout_constraintVertical_bias="0.139" />
 
     <TextView
-
         android:id="@+id/team1score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -155,7 +156,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.408" />
-
+    <!-- Displays the title -->
     <TextView
         android:id="@+id/titleScoreKeeper"
         android:layout_width="wrap_content"
